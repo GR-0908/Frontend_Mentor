@@ -1,0 +1,5 @@
+<div class="cart_button_with_elements">
+          <button class="minus_button"><img src="/images/icon-decrement-quantity.svg" ></button>
+          <span>1</span>
+          <button class="plus_button"><img src="/images/icon-increment-quantity.svg"></button>
+</div>

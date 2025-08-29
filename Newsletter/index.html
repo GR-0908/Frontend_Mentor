@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_news.css">
+  <script src="news.js" defer></script>
+</head>
+<body>
+
+  <div id="container" class="container">
+    <picture>
+      <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width: 600px)">
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="">
+    </picture>
+
+    <div class="form_content">
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+      <ul>
+        <li>Product discovery and building what matters</li>
+        <li>Measuring to ensure updates are a success</li>
+        <li>And much more!</li>
+      </ul>
+
+
+      <form id="email_form" novalidate>
+        <div class="label_input">
+            <label>Email address</label>
+            <input id="email_input" type="email" placeholder="email@company.com">
+            <div class="error">Valid email required</div>
+        </div>
+      
+        <button type="submit">Subscribe to monthly newsletter</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div id="success_card" class="success_card" hidden>
+    <div class="success_card_content">
+      <img src="assets/images/icon-success.svg">
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <span id="address"></span>. 
+        Please open it and click the button inside to confirm your subscription.</p>
+    </div>
+      <button id="success_btn">Dismiss message</button>  
+  </div>
+
+</body>
+</html>

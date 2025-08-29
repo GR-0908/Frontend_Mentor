@@ -1,0 +1,41 @@
+<article class="cart cart_products">
+    <p class="cart_title">Your Cart</p>
+    
+    <div class="card_product_purchased">
+      <div>
+        <p class="cart_product_purchased_title">Classic Tiramisu</p>
+        <p class="info_price"><span>4x</span><span>@$5.50</span><span>$5.50</span></p>
+      </div>
+      <button><img src="/images/icon-remove-item.svg"></button> 
+    </div>  
+
+    <div class="card_product_purchased">
+      <div>
+        <p class="cart_product_purchased_title">Classic Tiramisu</p>
+        <p class="info_price"><span>4x</span><span>@$5.50</span><span>$5.50</span></p>
+      </div>
+      <button><img src="/images/icon-remove-item.svg"></button> 
+    </div>  
+
+    <div class="card_product_purchased">
+      <div>
+        <p class="cart_product_purchased_title">Classic Tiramisu</p>
+        <p class="info_price"><span>4x</span><span>@$5.50</span><span>$5.50</span></p>
+      </div>
+      <button><img src="/images/icon-remove-item.svg"></button> 
+    </div>  
+
+    <div class="order_total">
+        <p>Order Total</p>
+        <p>$46.50</p>
+    </div>
+    
+    <div class="carbon_neutral">
+      <img src="/images/icon-carbon-neutral.svg">
+      <p>This is a <span>carbon-neutral</span> delivery</p>
+    </div>
+
+    <button class="confirm_order_button">Confirm Order</button>
+
+  </article>
+    
