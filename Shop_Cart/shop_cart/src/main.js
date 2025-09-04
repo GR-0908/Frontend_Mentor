@@ -28,6 +28,7 @@ function placeProductsOnGrid(productsJson){
         grid_product_div.innerHTML += 
         `<article  class="product" data-id="${article_counter}">
             <picture>  
+                <source srcset="${product.image.desktop} media="(min-width: 45rem)">
                 <img src=${product.image.mobile}>
                 <button class="cart_button_empty">Add to Cart</button>
             </picture>
@@ -155,6 +156,9 @@ function calculateTotalOrderAmount(){
 /****************** Modal Conf *********************/
 
 function renderModalConfiguration(){
+    const backdrop = document.createElement("div");
+    backdrop.classList.add("modal_backdrop");
+
     const conf_modal = document.createElement("div");
     conf_modal.classList.add("confirmation_modal");
 
@@ -197,11 +201,12 @@ function renderModalConfiguration(){
     order_button_modal.innerText = "Start New Order";
     conf_modal.appendChild(order_button_modal);
 
+    
     order_button_modal.addEventListener("click", () => {
         window.location.reload();
     })
 
-    return conf_modal;
+     return { conf_modal, backdrop };
 
 }
 
@@ -216,6 +221,8 @@ function renderCart(){
 
         cartHTML.innerHTML = `<p class="cart_title">Your Cart (${totalCartQuantity()})</p>` 
         
+        const productsWrapper = document.createElement("div");
+
         for (let itemCart of cart){
             let itemCartNode = cartHTML.querySelector(`.card_product_purchased[data-product-id="${itemCart[0]}"]`)
 
@@ -233,7 +240,7 @@ function renderCart(){
                     </div>
                     <button class="remove_button"><img src="/images/icon-remove-item.svg"></button> `;
 
-                cartHTML.appendChild(new_cart_entry);
+                productsWrapper.appendChild(new_cart_entry);    
 
                 const rem_button = new_cart_entry.querySelector(".remove_button");
                 rem_button.addEventListener("click", () => {
@@ -254,6 +261,8 @@ function renderCart(){
             }
         }
 
+        cartHTML.appendChild(productsWrapper);
+
         const order_total_element = document.createElement("div");
         order_total_element.classList.add("order_total");
         order_total_element.innerHTML = `<p>Order Total</p>
@@ -271,11 +280,19 @@ function renderCart(){
         confirm_order_button.innerText = "Confirm Order"
         cartHTML.appendChild(confirm_order_button);
 
+
         confirm_order_button.addEventListener("click", () => {
-            const conf_modal_child = renderModalConfiguration();
-            const grid_page_div = document.querySelector("body");
-            grid_page_div.appendChild(conf_modal_child);
-        })
+            const { conf_modal, backdrop } = renderModalConfiguration();
+            document.body.appendChild(backdrop);
+            document.body.appendChild(conf_modal);
+
+            
+            backdrop.addEventListener("click", () => {
+                conf_modal.remove();
+                backdrop.remove();
+            });
+        });
+
 
     } else if(cart.size === 0){
         cartHTML.classList.add("cart_empty");
@@ -288,7 +305,6 @@ function renderCart(){
     }
 
 }
-
 
 
 document.addEventListener("DOMContentLoaded", async (e) => {
