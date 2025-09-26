@@ -28,7 +28,7 @@ function placeProductsOnGrid(productsJson){
         grid_product_div.innerHTML += 
         `<article  class="product" data-id="${article_counter}">
             <picture>  
-                <source srcset="${product.image.desktop} media="(min-width: 45rem)">
+                <source srcset="${product.image.desktop}" media="(min-width: 45rem)">
                 <img src=${product.image.mobile}>
                 <button class="cart_button_empty">Add to Cart</button>
             </picture>

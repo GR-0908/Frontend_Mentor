@@ -95,6 +95,8 @@ body{
   color: var(--clr-primary-rose-900);
   font-weight: var(--fw-regular);
   font-family: var(--ff-family);
+  max-width: 1440px;
+  margin-inline: auto;
 }
 
 .grid_page > div > h1{
@@ -104,15 +106,15 @@ body{
 .grid_page{
   display: grid;
   grid-template-columns: 1fr;
-  padding: 1.5rem;
-  gap:1.5rem;
+  padding: 4rem;
+  gap:2rem;
 }
 
 
 .grid_product{
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 2rem 1.5rem;
   width:fit-content;
   /*border: 2px solid limegreen;*/
 }
@@ -321,6 +323,7 @@ line-height: 2;
 }
 
 .card_product_purchased button{
+  cursor: pointer;
   width: fit-content;
   height: fit-content;
   justify-self: end;
