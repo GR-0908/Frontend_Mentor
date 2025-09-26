@@ -1,0 +1,9 @@
+
+<div class="card_product_purchased_conf_modal">
+        <img src="/images/image-meringue-thumbnail.jpg">
+        <div>
+          <p class="cart_product_purchased_title modal_conf">Classic Tiramisu</p>
+          <p class="info_price modal_conf"><span>4x</span><span>@$5.50</span></p>
+        </div>
+        <p>$45.00</p> 
+</div>

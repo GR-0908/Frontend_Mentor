@@ -1,0 +1,35 @@
+
+  <div class="confirmation_modal">
+    <img src="/images/icon-order-confirmed.svg">
+    <div>
+      <h1>Order Confirmed</h1>
+      <p>We hope you enjoy food!</p>
+    </div>
+
+    <div class="purchased_products_wrapper">  
+      <div class="card_product_purchased_conf_modal">
+        <img src="/images/image-meringue-thumbnail.jpg">
+        <div>
+          <p class="cart_product_purchased_title">Classic Tiramisu</p>
+          <p class="info_price"><span>4x</span><span>@$5.50</span></p>
+        </div>
+        <p>$45.00</p> 
+      </div> 
+      
+      <div class="card_product_purchased_conf_modal">
+        <img src="/images/image-meringue-thumbnail.jpg">
+        <div>
+          <p class="cart_product_purchased_title modal_conf">Classic Tiramisu</p>
+          <p class="info_price modal_conf"><span>4x</span><span>@$5.50</span></p>
+        </div>
+        <p>$45.00</p> 
+      </div>
+      
+      <div class="order_total">
+        <p>Order Total</p>
+        <p>$46.50</p>
+      </div>
+      
+    </div>
+
+    <button class="confirm_order_button">Start New Order</button>
